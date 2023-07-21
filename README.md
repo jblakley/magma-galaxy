@@ -4,7 +4,7 @@ Create an Ubuntu VM, take reference from [multipass](docs/multipass.md) docs.
 
 Quick Install:
 ```bash
-sudo bash -c "$(curl -sL https://github.com/ShubhamTatvamasi/magma-galaxy/raw/master/deploy-orc8r.sh)"
+sudo bash -c "$(curl -sL https://github.com/jblakley/magma-galaxy/raw/master/deploy-orc8r.sh)"
 ```
 
 Switch to `magma` user after deployment has finsished:
