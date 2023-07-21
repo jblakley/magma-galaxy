@@ -18,7 +18,7 @@ ORC8R_DOMAIN="magma.local"
 NMS_ORGANIZATION_NAME="magma-test"
 NMS_EMAIL_ID_AND_PASSWORD="admin"
 ORC8R_IP=$(ip a s $(ip r | head -n 1 | awk '{print $5}') | awk '/inet/ {print $2}' | cut -d / -f 1 | head -n 1)
-GITHUB_USERNAME="ShubhamTatvamasi"
+GITHUB_USERNAME="jblakley"
 MAGMA_ORC8R_REPO="magma-galaxy"
 MAGMA_USER="magma"
 HOSTS_FILE="hosts.yml"
@@ -48,7 +48,7 @@ add-apt-repository --yes ppa:ansible/ansible
 apt install yq ansible -y
 
 # Create magma user and give sudo permissions
-useradd -m ${MAGMA_USER} -s /bin/bash -G sudo
+id ${MAGMA_USER} || useradd -m ${MAGMA_USER} -s /bin/bash -G sudo
 echo "${MAGMA_USER} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 # switch to magma user
