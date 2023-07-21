@@ -14,8 +14,8 @@ if [ $(id -u) != 0 ]; then
   exit 1
 fi
 
-ORC8R_DOMAIN="magma.local"
-NMS_ORGANIZATION_NAME="magma-test"
+ORC8R_DOMAIN="lel-magma5g.eastus.cloudapp.azure.com"
+NMS_ORGANIZATION_NAME="lel-5g"
 NMS_EMAIL_ID_AND_PASSWORD="admin"
 ORC8R_IP=$(ip a s $(ip r | head -n 1 | awk '{print $5}') | awk '/inet/ {print $2}' | cut -d / -f 1 | head -n 1)
 GITHUB_USERNAME="jblakley"
